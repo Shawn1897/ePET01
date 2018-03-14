@@ -1,6 +1,7 @@
 #app {
   width: 100%;
   height: 100%;
+  background: #fff;
 }
 #app .xiazaiapp {
   width: 100%;
@@ -22,15 +23,47 @@
   width: 100%;
 }
 #app .xiazaiapp .guide {
-  margin-top: 20px;
+  color: #898989;
+  background-color: #fff;
+  font-size: 14px;
   width: 100%;
-  height: 51px;
-  box-sizing: border-box;
-  background: #fff;
+  margin-top: 10px;
+  display: flex;
+  justify-content: space-around;
+  height: 25px;
+  line-height: 25px;
 }
-#app .xiazaiapp .wenzi {
-  font-size: 13px;
-  display: block;
-  margin: top 50px;
-  float: left;
+#app .xiazaiapp .guide .petcity {
+  flex: 25%;
+  position: relative;
+}
+#app .xiazaiapp .guide .petcity::before {
+  content: '';
+  position: absolute;
+  border: 5px solid;
+  border-color: #f00 transparent transparent;
+  right: 7px;
+  top: 5px;
+}
+#app .xiazaiapp .guide .searchs {
+  flex: 60%;
+  background: #e9e9e9;
+  position: relative;
+}
+#app .xiazaiapp .guide .searchs::before {
+  position: relative;
+  right: -20px;
+}
+#app .xiazaiapp .guide .searchs input {
+  box-sizing: border-box;
+  background: #e9e9e9;
+  height: inherit;
+}
+#app .xiazaiapp .guide .msg-box {
+  padding-left: 15px;
+  flex: 15%;
+}
+#app .xiazaiapp .guide .msg-box .icon-msg {
+  font-size: 25px;
+  margin-left: 5px;
 }
