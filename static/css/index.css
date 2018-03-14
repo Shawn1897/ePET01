@@ -1,0 +1,36 @@
+#app {
+  width: 100%;
+  height: 100%;
+}
+#app .xiazaiapp {
+  width: 100%;
+  height: 51px;
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+}
+#app .xiazaiapp .appImage {
+  width: 100%;
+  height: 100%;
+}
+#app .xiazaiapp .appImage .ggRight {
+  display: block;
+  width: 100%;
+}
+#app .xiazaiapp .appImage .ggRight >img {
+  width: 100%;
+}
+#app .xiazaiapp .guide {
+  margin-top: 20px;
+  width: 100%;
+  height: 51px;
+  box-sizing: border-box;
+  background: #fff;
+}
+#app .xiazaiapp .wenzi {
+  font-size: 13px;
+  display: block;
+  margin: top 50px;
+  float: left;
+}
