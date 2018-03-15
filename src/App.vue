@@ -22,4 +22,8 @@ export default {
     height 100%
     background #f5f5f5
     position relative
+  img
+    display block
+    width 100%
+
 </style>

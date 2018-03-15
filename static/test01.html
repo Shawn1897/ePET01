@@ -6,6 +6,7 @@
         content="width=device-width,initial-scale=1.0,user-scalable=no">
   <link rel="stylesheet" href="css/reset.css">
   <link rel="stylesheet" href="./css/index.css">
+  <link rel="stylesheet" href="./css/swiper.css">
   <link rel="stylesheet" href="http://at.alicdn.com/t/font_590388_hq64uyzsbgrs5rk9.css">
   <title>e宠</title>
 </head>
@@ -23,16 +24,15 @@
     <!--导航-->
     <div class="guide">
 
+        <!--左侧地理位置-->
         <div class="petcity">
-          <!--左侧地理位置-->
           <span class="wenzi">狗狗</span>
           <span class="wenzi">|</span>
           <span class="wenzi">重庆</span>
         </div>
 
-
+        <!--中间搜索框-->
         <div class="searchs">
-          <!--中间搜索框-->
           <input type="text" disabled="disabled" placeholder="搜索商品和品牌">
           <i class="searchInput iconfont icon-search"></i>
         </div>
@@ -42,7 +42,76 @@
           <i class="iconfont icon-msg"></i>
         </div>
     </div>
+
+    <!--搜索框下的分类导航栏-->
+    <div class="serviceType">
+      <div class="serviceItem"><span class="text move">首页</span></div>
+      <div class="serviceItem"><span class="text">狗狗主粮</span></div>
+      <div class="serviceItem"><span class="text">服饰城</span></div>
+      <div class="serviceItem"><span class="text">医疗保健</span></div>
+      <div class="serviceItem"><span class="text">零食玩具</span></div>
+      <div class="serviceItem"><span class="text">日用外出</span></div>
+      <div class="serviceItem"><span class="text">美容香波</span></div>
+    </div>
   </div>
+
+  <!--轮播-->
+  <div class=" special swiper-container">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide">
+        <ul class="slide">
+          <li class="slide-first">
+            <a href="###">
+              <img src="./image/shopHeader/swiper01.jpg" alt="">
+
+            </a>
+          </li>
+          <li class="slide-first">
+            <a href="###">
+              <img src="./image/shopHeader/swiper02.jpg" alt="">
+
+            </a>
+          </li>
+          <li class="slide-first">
+            <a href="###">
+              <img src="./image/shopHeader/swiper03.jpg" alt="">
+
+            </a>
+          </li>
+          <li class="slide-first">
+            <a href="###">
+              <img src="./image/shopHeader/swiper04.jpg" alt="">
+
+            </a>
+          </li>
+          <li class="slide-first">
+            <a href="###">
+              <img src="./image/shopHeader/swiper05.jpg" alt="">
+
+            </a>
+          </li>
+          <li class="slide-first">
+            <a href="###">
+              <img src="./image/shopHeader/swiper06.jpg" alt="">
+
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
 </div>
+
+  <script type="text/javascript" src="./js/swiper.js"></script>
+  <script>
+    var swiper = new Swiper('.special', {
+      pagination: {
+        el: '.swiper-pagination',
+        loop:true,
+        clickable:true
+      },
+    });
+  </script>
 </body>
+
+
 </html>

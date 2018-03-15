@@ -5,7 +5,6 @@
 }
 #app .xiazaiapp {
   width: 100%;
-  height: 51px;
   position: fixed;
   left: 0;
   right: 0;
@@ -66,4 +65,47 @@
 #app .xiazaiapp .guide .msg-box .icon-msg {
   font-size: 25px;
   margin-left: 5px;
+}
+#app .xiazaiapp .serviceType {
+  display: flex;
+  margin-top: 20px;
+}
+#app .xiazaiapp .serviceType .serviceItem {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  white-space: nowrap;
+  margin-left: 23px;
+}
+#app .xiazaiapp .serviceType .serviceItem span {
+  color: #666;
+  height: 20px;
+  padding-bottom: 5px;
+}
+#app .xiazaiapp .serviceType .serviceItem span.current {
+  color: #6ab15e;
+  height: 200px;
+  padding: 0;
+}
+#app .special {
+  overflow: hidden;
+}
+#app .special width 100% .slide {
+  width: 100%;
+  float: left;
+  overflow: hidden;
+}
+#app .special width 100% .slide .slide-first {
+  width: 25%;
+  float: left;
+  list-style: none;
+  box-sizing: border-box;
+}
+#app .special width 100% .slide .slide-first a {
+  display: block;
+  color: #000;
+}
+#app .special width 100% .slide .slide-first a img {
+  width: 100%;
+  height: 45px;
 }
