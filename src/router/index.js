@@ -6,7 +6,10 @@ import VueRouter from 'vue-router'
 import Mine from '../pages/Mine/Mine.vue'
 import Msite from '../pages/Msite/Msite.vue'
 import Pettype from '../pages/Pettype/Pettype.vue'
+import Type from '../pages/Pettype/type/type.vue'
+import Brand from '../pages/Pettype/brand/brand.vue'
 import Shopcar from '../pages/Shopcar/Shopcar.vue'
+
 
 
 Vue.use(VueRouter)
@@ -29,6 +32,19 @@ export default new VueRouter({
     {
       path:'/pettype',
       component:Pettype,
+      children:[
+
+        //二级路由
+        {
+          path:'brand',
+          component:Brand
+        },
+        {
+          path:'type',
+          component:Type
+        }
+
+      ]
     },
     {
       path:'/shopcar',

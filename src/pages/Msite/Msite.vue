@@ -1,5 +1,6 @@
 <template>
     <div>
+
       <div class="xiazaiapp">
         <!--广告图片-->
         <div class="appImage">
@@ -107,77 +108,240 @@
 
         <!--右侧倒计时-->
         <div class="limit">
-          <span>下一场开始 16:00</span>
+          下一场开始
+          <span class="hour">16</span>
+          <span>:</span>
+          <span class="minute">00</span>
+        </div>
+
+        <!--更多-->
+        <div class="more">
           <img src="./image/more.png" alt="">
         </div>
       </div>
 
       <!--倒计时秒杀商品-->
-      <div class="partGoods">
-        <div class="goods">
-          <div class="goodsPic">
+      <div class="fastKill swiper-container">
+
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
             <img src="./image/goods01.jpg" alt="">
+            <span class="price">￥0.99</span>
+            <span class="cheap">省8.91</span>
           </div>
-          <div class="price">
-            <span>￥0.99</span>
+
+          <div class="swiper-slide">
+            <img src="./image/goods02.jpg" alt="">
+            <span class="price">￥0.99</span>
+            <span class="cheap">省8.91</span>
           </div>
-            <p>省8.91</p>
+
+          <div class="swiper-slide">
+            <img src="./image/goods03.jpg" alt="">
+            <span class="price">￥0.99</span>
+            <span class="cheap">省8.91</span>
+          </div>
+
+          <div class="swiper-slide">
+            <img src="./image/goods04.jpg" alt="">
+            <span class="price">￥0.99</span>
+            <span class="cheap"> 省8.91</span>
+          </div>
+
+          <div class="swiper-slide">
+            <img src="./image/goods05.jpg" alt="">
+            <span class="price">￥0.99</span>
+            <span class="cheap">省8.91</span>
+          </div>
+
+          <div class="swiper-slide">
+            <img src="./image/goods06.jpg" alt="">
+            <span class="price">￥0.99</span>
+            <span class="cheap">省8.91</span>
+          </div>
+
+          <div class="swiper-slide">
+            <img src="./image/goods07.jpg" alt="">
+            <span class="price">￥0.99</span>
+            <span class="cheap">省8.91</span>
+          </div>
         </div>
-        <div class="goods">
-          <div class="goodsPic">
-            <img src="./image/goods01.jpg" alt="">
-          </div>
-          <div class="price">
-            <span>￥0.99</span>
-          </div>
-          <p>省8.91</p>
+    </div>
+
+      <!--品牌力量-->
+      <div class="power">
+        <img src="./image/power.jpg" alt="">
+      </div>
+
+      <!--多人动态图-->
+      <div class="people">
+        <img src="./image/people.gif" alt="">
+      </div>
+
+      <!--vip-->
+      <div class="vip">
+        <img src="./image/vip.jpg" alt="">
+      </div>
+
+      <!--综合服务-->
+      <div class="serviceArea">
+        <div class="areaUp">
+          <div class="areaUpPics"><img src="./image/service/vstar.jpg" alt=""></div>
+          <div class="areaUpPics"><img src="./image/service/hospital.jpg" alt=""></div>
         </div>
-        <div class="goods">
-          <div class="goodsPic">
-            <img src="./image/goods01.jpg" alt="">
-          </div>
-          <div class="price">
-            <span>￥0.99</span>
-          </div>
-          <p>省8.91</p>
-        </div>
-        <div class="goods">
-          <div class="goodsPic">
-            <img src="./image/goods01.jpg" alt="">
-          </div>
-          <div class="price">
-            <span>￥0.99</span>
-          </div>
-          <p>省8.91</p>
-        </div>
-        <div class="goods">
-          <div class="goodsPic">
-            <img src="./image/goods01.jpg" alt="">
-          </div>
-          <div class="price">
-            <span>￥0.99</span>
-          </div>
-          <p>省8.91</p>
-        </div>
-        <div class="goods">
-          <div class="goodsPic">
-            <img src="./image/goods01.jpg" alt="">
-          </div>
-          <div class="price">
-            <span>￥0.99</span>
-          </div>
-          <p>省8.91</p>
-        </div>
-        <div class="goods">
-          <div class="goodsPic">
-            <img src="./image/goods01.jpg" alt="">
-          </div>
-          <div class="price">
-            <span>￥0.99</span>
-          </div>
-          <p>省8.91</p>
+        <div class="areaDown">
+          <div class="areaDownPics"><img src="./image/service/around.jpg" alt=""></div>
+          <div class="areaDownPics"><img src="./image/service/treat.jpg" alt=""></div>
         </div>
       </div>
+
+      <!--大牌1折-->
+      <div class="dapai01">
+        <img src="./image/dpLunbo/dapai01.jpg" alt="">
+      </div>
+
+      <!--大牌轮播-->
+      <div class="dpLunbo swiper-container">
+
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <img src="./image/dpLunbo/dp01.jpg" alt="">
+          </div>
+
+          <div class="swiper-slide">
+            <img src="./image/dpLunbo/dp02.jpg" alt="">
+          </div>
+
+          <div class="swiper-slide">
+            <img src="./image/dpLunbo/dp03.jpg" alt="">
+          </div>
+
+          <div class="swiper-slide">
+            <img src="./image/dpLunbo/dp04.jpg" alt="">
+          </div>
+
+          <div class="swiper-slide">
+            <img src="./image/dpLunbo/dp05.jpg" alt="">
+          </div>
+
+          <div class="swiper-slide">
+            <img src="./image/dpLunbo/dp06.jpg" alt="">
+          </div>
+        </div>
+      </div>
+
+      <!--大牌好货-->
+      <div class="dpGoods">
+        <img src="./image/dpLunbo/dapai02.jpg" alt="">
+      </div>
+
+      <!--many pictures-->
+      <div class="picsArea">
+        <div class="picsF">
+          <div class="fourtyPics">
+            <img src="./image/fourty/fourty01.jpg" alt="" class="pics">
+          </div>
+          <div class="fourtyPics">
+            <img src="./image/fourty/fourty02.jpg" alt="" class="pics">
+          </div>
+          <div class="fourtyPics">
+            <img src="./image/fourty/fourty03.jpg" alt="" class="pics">
+          </div>
+          <div class="fourtyPics">
+            <img src="./image/fourty/fourty04.jpg" alt="" class="pics">
+          </div>
+          <div class="fourtyPics">
+            <img src="./image/fourty/fourty18.jpg" alt="" class="pics">
+          </div>
+          <div class="fourtyPics">
+            <img src="./image/fourty/fourty06.jpg" alt="" class="pics">
+          </div>
+          <div class="fourtyPics">
+            <img src="./image/fourty/fourty07.jpg" alt="" class="pics">
+          </div>
+          <div class="fourtyPics">
+            <img src="./image/fourty/fourty08.jpg" alt="" class="pics">
+          </div>
+          <div class="fourtyPics">
+            <img src="./image/fourty/fourty09.jpg" alt="" class="pics">
+          </div>
+          <div class="fourtyPics">
+            <img src="./image/fourty/fourty10.jpg" alt="" class="pics">
+          </div>
+          <div class="fourtyPics">
+            <img src="./image/fourty/fourty11.jpg" alt="" class="pics">
+          </div>
+          <div class="fourtyPics">
+            <img src="./image/fourty/fourty12.jpg" alt="" class="pics">
+          </div>
+          <div class="fourtyPics">
+            <img src="./image/fourty/fourty13.jpg" alt="" class="pics">
+          </div>
+          <div class="fourtyPics">
+            <img src="./image/fourty/fourty14.jpg" alt="" class="pics">
+          </div>
+          <div class="fourtyPics">
+            <img src="./image/fourty/fourty15.jpg" alt="" class="pics">
+          </div>
+          <div class="fourtyPics">
+            <img src="./image/fourty/fourty17.jpg" alt="" class="pics">
+          </div>
+        </div>
+      </div>
+
+      <!--最惨奖-->
+      <div class="zuican">
+        <img src="./image/end/zuican.jpg" alt="">
+      </div>
+
+      <!--dog-->
+      <div class="dog">
+        <img src="./image/end/liedog.jpg" alt="">
+      </div>
+
+      <!--特色-->
+      <div class="tese">
+        <img src="./image/end/xingqiu.jpg" alt="">
+      </div>
+
+      <div class="chaopin">
+        <div class="cpSell">
+          <img src="./image/end/aroundSell.jpg" alt="">
+        </div>
+        <div class="huoDong">
+          <img src="./image/end/cpVideo.jpg" alt="">
+          <img src="./image/end/mzlm.jpg" alt="">
+        </div>
+      </div>
+
+      <!--栏目-->
+      <div class="lanmu">
+        <img src="./image/end/tese.jpg" alt="">
+      </div>
+
+      <!--colorful-->
+      <div class="colorful">
+        <div class="stair01">
+          <div class="stairsPics"><img src="./image/stairs/stairs01.jpg" alt=""></div>
+          <div class="stairsPics"><img src="./image/stairs/stairs02.jpg" alt=""></div>
+          <div class="stairsPics"><img src="./image/stairs/stairs03.jpg" alt=""></div>
+          <div class="stairsPics"><img src="./image/stairs/stairs04.jpg" alt=""></div>
+          <div class="stairsPics"><img src="./image/stairs/stairs05.jpg" alt=""></div>
+          <div class="stairsPics"><img src="./image/stairs/stairs06.jpg" alt=""></div>
+        </div>
+      </div>
+
+      <!--HeaderFinal-->
+      <footer>
+        <div class="nav on">
+          <span class="on">触屏版</span>
+          <span>手机客户端</span>
+          <span>关于我们</span>
+          <span>联系我们</span>
+          <span>&#169wap.epet.com 版权:</span>
+          <span>重庆易宠科技有限公司</span>
+        </div>
+      </footer>
     </div>
 </template>
 
@@ -186,7 +350,7 @@
     import 'swiper/dist/css/swiper.min.css'
     export default{
         mounted(){
-          new Swiper('.swiper-container',{
+          new Swiper('.special',{
             loop:true,
             autoplay:true,
             delay:300,
@@ -195,7 +359,23 @@
                 clickable:true
             }
 
+          });
+
+          new Swiper('.fastKill', {
+            slidesPerView:3.5,
+            spaceBetween:30,
           })
+
+          new Swiper('.dpLunbo', {
+            loop:true,
+            autoplay:true,
+            delay:300,
+            pagination:{
+              el:'.swiper-pagination',
+              clickable:true
+            }
+          })
+
         }
     }
 </script>
@@ -279,7 +459,7 @@
               height 200px
               padding 0
 
-    .swiper-container
+    .special
       margin-top 137px
       width 100%
       height 100%
@@ -331,31 +511,210 @@
         width 100%
         height 100%
     .crazyShopMarket
+      height 24px
+      line-height 24px
+      padding-top 10px
+      background #ffffff
       clearFix()
       .crazyShop
-        width 24%
         float left
-        >img
-          display block
-          width 85px
-          height 19px
+        width 24%
       .limit
-        float right
-        span
-          display block
-          float left
-          color black
-          width 100%
-          height 100%
+        float left
+        width 45%
+        text-align right
+        margin-left 13%
+        font-size 13px
+        .hour
+          border 1px solid
+        .minute
+          border 1px solid
+      .more
+         float left
+         width 18%
         img
-          display block
-          float left
-          width 68px
-          height 34px
+          vertical-align middle
+    .fastKill
+      padding-bottom 10px
+      background #ffffff
+      width 100%
+      .swiper-wrapper
+        .swiper-slide
+          text-align center
+          .price
+            display block
+            color red
+          .cheap
+            font-size 13px
+            color: #aaa
     .partGoods
       width 100%
+      height 100%
       .goods
-        float left
         width 84px
-        height 84px
+        height 130px
+        float left
+        .swiper-slide
+          width 100%
+          height 100%
+         >img
+            width 100%
+            height 100%
+
+
+    .power
+      width 100%
+      height 100%
+      >img
+        width 100%
+        height 100%
+        display block
+    .people
+      width 100%
+      height 100%
+      >img
+        width 100%
+        height 100%
+        display block
+    .vip
+      width 100%
+      height 100%
+      >img
+        width 100%
+        height 100%
+        display block
+    .serviceArea
+      width 100%
+      height 100%
+      .areaUp
+        width 100%
+        height 100%
+        .areaUpPics
+          width 50%
+          height 100%
+          float left
+          >img
+            width 100%
+            height 100%
+            display block
+      .areaDown
+        width 100%
+        height 100%
+        .areaDownPics
+          width 50%
+          height 100%
+          float left
+          >img
+            width 100%
+            height 100%
+            display block
+
+
+    .dapai01
+      width 100%
+      height 100%
+      >img
+        width 100%
+        height 100%
+        display block
+    .dpLunbo
+      width 100%
+      .swiper-wrapper
+        .swiper-slide
+          text-align center
+    .dpGoods
+      width 100%
+      height 100%
+      >img
+        width 100%
+        height 100%
+        display block
+
+    .picsArea
+      width 100%
+      height 100%
+      .picsF
+        width 100%
+        height 100%
+        .fourtyPics
+          width 50%
+          height 100%
+          float left
+          >img
+            width 100%
+            height 100%
+            display block
+
+    .zuican
+      width 100%
+      height 100%
+      >img
+        width 100%
+        height 100%
+        display block
+    .dog
+      width 100%
+      height 100%
+      >img
+        width 100%
+        height 100%
+        display block
+    .tese
+      width 100%
+      height 100%
+      >img
+        width 100%
+        height 100%
+        display block
+    .chaopin
+      width 100%
+      height 100%
+      .cpSell
+        width 50%
+        height 100%
+        float left
+        >img
+          width 100%
+          height 100%
+      .huoDong
+        width 50%
+        height 100%
+        float right
+        >img
+          width 100%
+          height 100%
+    .lanmu
+      width 100%
+      height 100%
+      >img
+        width 100%
+        height 100%
+        display block
+    .colorful
+      width 100%
+      height 100%
+      .stair01
+        width 100%
+        height 100%
+        .stairsPics
+          float left
+          width 50%
+          height 100%
+          >img
+            width 100%
+            height 100%
+            display block
+    footer
+      padding 80px 0
+      background #ffffff
+      .nav
+        text-align center
+        vertical-align middle
+        position relative
+        top 18px
+        line-height 22px
+        &::on
+          color red
+
+
 </style>

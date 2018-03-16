@@ -53,11 +53,27 @@ day02:
 	遗留问题:
 	  导航分类栏滑动未处理。
 
+
 	需要注意的问题
 	  (1)编写代码的时候要足够细心。不然写错或是多写了之类都会出错。要细心写代码
 	  (2)在用Swiper写轮播图的时候，因为自己的样式处理的不好以及粗心。出现了拉弹簧效果。
 	  (3)写完轮播图后，写下面的图片时。要记得去App.vue组件里设置图片样式
 	  (4)在搞完头部导航栏，下面的轮播图及其图片后。拖动整个页面上滑会显示出头部导航栏”不稳定(显示或隐藏)“的问题。
 	  给头部导航栏设置一个z-index:100即可解决这种层级问题。
+	  (5)在做到拉弹簧效果时，出现了丑陋的“消失”bug。究其原因，是因为我在处理第一个轮播图时用的类名和第二个相同
+	  冲突了(因为swiper的原因，每个轮播都需要带swiper-container这么个类名)。所以记住。再用swiper写轮播的时候。
+	  每个轮播之间的类名不要用同一个
+	  (6)多练习。争取有进步
 
+  当前进度
+    目前在做首页每日疯抢那一块，有点浮动问题暂时未处理，争取今天把首页搞完
+    animation: myAnimation 1s 2s linear normal infinite;
+    animation-name
+    animation-duration
+    animation-delay
+    animation-timing-function  steps()
+    animation-iteration-count (次数)
+    *animation-direction
+    *animation-fill-mode
+    *animation-play-state
 
