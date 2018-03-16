@@ -31,7 +31,7 @@
       <!--右侧商品-->
       <div class="foods-Wrapper">
         <ul class="foods-WrapperUl">
-          <h1 class="hotType">热门分类</h1>
+          <h1 >热门分类</h1>
           <li class="food-list food-list-hook">
             <img src="../pinpai/food01.jpg" alt="">
             <p>进口狗粮</p>
@@ -82,7 +82,7 @@
           margin-top -1px
           background #f3f4f5
           color: red
-          font-weight: 700
+          font-weight 700
     .foods-Wrapper
       width 80%
       height 100%

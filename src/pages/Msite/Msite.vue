@@ -1,383 +1,385 @@
 <template>
-    <div>
+  <div>
 
-      <div class="xiazaiapp">
-        <!--广告图片-->
-        <div class="appImage">
+    <div class="xiazaiapp">
+      <!--广告图片-->
+      <div class="appImage">
       <span class="ggRight">
         <img src="./image/guanggao.jpg">
       </span>
+      </div>
+
+      <!--导航-->
+      <div class="guide">
+
+        <!--左侧地理位置-->
+        <div class="petcity">
+          <span class="wenzi">狗狗</span>
+          <span class="wenzi">|</span>
+          <span class="wenzi">重庆</span>
         </div>
 
-        <!--导航-->
-        <div class="guide">
-
-          <!--左侧地理位置-->
-          <div class="petcity">
-            <span class="wenzi">狗狗</span>
-            <span class="wenzi">|</span>
-            <span class="wenzi">重庆</span>
-          </div>
-
-          <!--中间搜索框-->
-          <div class="searchs">
-            <input type="text" disabled="disabled" placeholder="搜索商品和品牌">
-            <i class="searchInput iconfont icon-search"></i>
-          </div>
-
-          <!--右侧icon消息-->
-          <div class="msg-box">
-            <i class="iconfont icon-msg"></i>
-          </div>
+        <!--中间搜索框-->
+        <div class="searchs">
+          <input type="text" disabled="disabled" placeholder="搜索商品和品牌">
+          <i class="searchInput iconfont icon-search"></i>
         </div>
 
-        <!--搜索框下的分类导航栏-->
-        <div class="serviceType">
-          <div class="serviceItem"><span class="text move">首页</span></div>
-          <div class="serviceItem"><span class="text">狗狗主粮</span></div>
-          <div class="serviceItem"><span class="text">服饰城</span></div>
-          <div class="serviceItem"><span class="text">医疗保健</span></div>
-          <div class="serviceItem"><span class="text">零食玩具</span></div>
-          <div class="serviceItem"><span class="text">日用外出</span></div>
-          <div class="serviceItem"><span class="text">美容香波</span></div>
+        <!--右侧icon消息-->
+        <div class="msg-box">
+          <i class="iconfont icon-msg"></i>
         </div>
       </div>
 
-      <!--轮播-->
-      <div class="special swiper-container">
-        <div class="swiper-wrapper">
-          <div class="swiper-slide">
-            <img src="./image/swiper01.jpg" alt="">
-          </div>
-          <div class="swiper-slide">
-            <img src="./image/swiper02.jpg" alt="">
-          </div>
-          <div class="swiper-slide">
-            <img src="./image/swiper03.jpg" alt="">
-          </div>
-          <div class="swiper-slide">
-            <img src="./image/swiper04.jpg" alt="">
-          </div>
-          <div class="swiper-slide">
-            <img src="./image/swiper05.jpg" alt="">
-          </div>
-          <div class="swiper-slide">
-            <img src="./image/swiper06.jpg" alt="">
-          </div>
-        </div>
-        <div class="swiper-pagination"></div>
+      <!--搜索框下的分类导航栏-->
+      <div class="serviceType">
+        <div class="serviceItem" v-for="(menu,index) in homepage.menus" :key="index"><span class="text move">{{menu.menu_name}}</span></div>
       </div>
-
-      <!--紧贴轮播的静态图-->
-      <div class="kpMoving">
-        <img src="./image/keepmoving.jpg" alt="">
-      </div>
-
-      <!--10个分功能-->
-      <div class="ten">
-        <!--上面5张图-->
-        <div class="front">
-          <div class="frontImg"><img src="./image/ePet01.jpg" alt=""></div>
-          <div class="frontImg"><img src="./image/ePet02.jpg" alt=""></div>
-          <div class="frontImg"><img src="./image/ePet03.jpg" alt=""></div>
-          <div class="frontImg"><img src="./image/ePet04.jpg" alt=""></div>
-          <div class="frontImg"><img src="./image/ePet05.jpg" alt=""></div>
-        </div>
-
-        <!--下面5张图-->
-        <div class="behind">
-          <div class="behindImg"><img src="./image/ePet06.jpg" alt=""></div>
-          <div class="behindImg"><img src="./image/ePet07.jpg" alt=""></div>
-          <div class="behindImg"><img src="./image/ePet08.jpg" alt=""></div>
-          <div class="behindImg"><img src="./image/ePet09.jpg" alt=""></div>
-          <div class="behindImg"><img src="./image/ePet10.jpg" alt=""></div>
-        </div>
-      </div>
-
-      <!--秒杀图片1-->
-      <div class="mKill">
-        <img src="./image/miaosha.jpg" alt="">
-      </div>
-
-      <!--倒计时秒杀图片与文字-->
-      <div class="crazyShopMarket">
-        <!--左侧图片每日疯抢-->
-        <div class="crazyShop">
-          <img src="./image/crazyShop.png" alt="">
-        </div>
-
-        <!--右侧倒计时-->
-        <div class="limit">
-          下一场开始
-          <span class="hour">16</span>
-          <span>:</span>
-          <span class="minute">00</span>
-        </div>
-
-        <!--更多-->
-        <div class="more">
-          <img src="./image/more.png" alt="">
-        </div>
-      </div>
-
-      <!--倒计时秒杀商品-->
-      <div class="fastKill swiper-container">
-
-        <div class="swiper-wrapper">
-          <div class="swiper-slide">
-            <img src="./image/goods01.jpg" alt="">
-            <span class="price">￥0.99</span>
-            <span class="cheap">省8.91</span>
-          </div>
-
-          <div class="swiper-slide">
-            <img src="./image/goods02.jpg" alt="">
-            <span class="price">￥0.99</span>
-            <span class="cheap">省8.91</span>
-          </div>
-
-          <div class="swiper-slide">
-            <img src="./image/goods03.jpg" alt="">
-            <span class="price">￥0.99</span>
-            <span class="cheap">省8.91</span>
-          </div>
-
-          <div class="swiper-slide">
-            <img src="./image/goods04.jpg" alt="">
-            <span class="price">￥0.99</span>
-            <span class="cheap"> 省8.91</span>
-          </div>
-
-          <div class="swiper-slide">
-            <img src="./image/goods05.jpg" alt="">
-            <span class="price">￥0.99</span>
-            <span class="cheap">省8.91</span>
-          </div>
-
-          <div class="swiper-slide">
-            <img src="./image/goods06.jpg" alt="">
-            <span class="price">￥0.99</span>
-            <span class="cheap">省8.91</span>
-          </div>
-
-          <div class="swiper-slide">
-            <img src="./image/goods07.jpg" alt="">
-            <span class="price">￥0.99</span>
-            <span class="cheap">省8.91</span>
-          </div>
-        </div>
     </div>
 
-      <!--品牌力量-->
-      <div class="power">
-        <img src="./image/power.jpg" alt="">
-      </div>
-
-      <!--多人动态图-->
-      <div class="people">
-        <img src="./image/people.gif" alt="">
-      </div>
-
-      <!--vip-->
-      <div class="vip">
-        <img src="./image/vip.jpg" alt="">
-      </div>
-
-      <!--综合服务-->
-      <div class="serviceArea">
-        <div class="areaUp">
-          <div class="areaUpPics"><img src="./image/service/vstar.jpg" alt=""></div>
-          <div class="areaUpPics"><img src="./image/service/hospital.jpg" alt=""></div>
+    <!--轮播-->
+    <div class="special swiper-container">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">
+          <img src="./image/swiper01.jpg" alt="">
         </div>
-        <div class="areaDown">
-          <div class="areaDownPics"><img src="./image/service/around.jpg" alt=""></div>
-          <div class="areaDownPics"><img src="./image/service/treat.jpg" alt=""></div>
+        <div class="swiper-slide">
+          <img src="./image/swiper02.jpg" alt="">
+        </div>
+        <div class="swiper-slide">
+          <img src="./image/swiper03.jpg" alt="">
+        </div>
+        <div class="swiper-slide">
+          <img src="./image/swiper04.jpg" alt="">
+        </div>
+        <div class="swiper-slide">
+          <img src="./image/swiper05.jpg" alt="">
+        </div>
+        <div class="swiper-slide">
+          <img src="./image/swiper06.jpg" alt="">
         </div>
       </div>
-
-      <!--大牌1折-->
-      <div class="dapai01">
-        <img src="./image/dpLunbo/dapai01.jpg" alt="">
-      </div>
-
-      <!--大牌轮播-->
-      <div class="dpLunbo swiper-container">
-
-        <div class="swiper-wrapper">
-          <div class="swiper-slide">
-            <img src="./image/dpLunbo/dp01.jpg" alt="">
-          </div>
-
-          <div class="swiper-slide">
-            <img src="./image/dpLunbo/dp02.jpg" alt="">
-          </div>
-
-          <div class="swiper-slide">
-            <img src="./image/dpLunbo/dp03.jpg" alt="">
-          </div>
-
-          <div class="swiper-slide">
-            <img src="./image/dpLunbo/dp04.jpg" alt="">
-          </div>
-
-          <div class="swiper-slide">
-            <img src="./image/dpLunbo/dp05.jpg" alt="">
-          </div>
-
-          <div class="swiper-slide">
-            <img src="./image/dpLunbo/dp06.jpg" alt="">
-          </div>
-        </div>
-      </div>
-
-      <!--大牌好货-->
-      <div class="dpGoods">
-        <img src="./image/dpLunbo/dapai02.jpg" alt="">
-      </div>
-
-      <!--many pictures-->
-      <div class="picsArea">
-        <div class="picsF">
-          <div class="fourtyPics">
-            <img src="./image/fourty/fourty01.jpg" alt="" class="pics">
-          </div>
-          <div class="fourtyPics">
-            <img src="./image/fourty/fourty02.jpg" alt="" class="pics">
-          </div>
-          <div class="fourtyPics">
-            <img src="./image/fourty/fourty03.jpg" alt="" class="pics">
-          </div>
-          <div class="fourtyPics">
-            <img src="./image/fourty/fourty04.jpg" alt="" class="pics">
-          </div>
-          <div class="fourtyPics">
-            <img src="./image/fourty/fourty18.jpg" alt="" class="pics">
-          </div>
-          <div class="fourtyPics">
-            <img src="./image/fourty/fourty06.jpg" alt="" class="pics">
-          </div>
-          <div class="fourtyPics">
-            <img src="./image/fourty/fourty07.jpg" alt="" class="pics">
-          </div>
-          <div class="fourtyPics">
-            <img src="./image/fourty/fourty08.jpg" alt="" class="pics">
-          </div>
-          <div class="fourtyPics">
-            <img src="./image/fourty/fourty09.jpg" alt="" class="pics">
-          </div>
-          <div class="fourtyPics">
-            <img src="./image/fourty/fourty10.jpg" alt="" class="pics">
-          </div>
-          <div class="fourtyPics">
-            <img src="./image/fourty/fourty11.jpg" alt="" class="pics">
-          </div>
-          <div class="fourtyPics">
-            <img src="./image/fourty/fourty12.jpg" alt="" class="pics">
-          </div>
-          <div class="fourtyPics">
-            <img src="./image/fourty/fourty13.jpg" alt="" class="pics">
-          </div>
-          <div class="fourtyPics">
-            <img src="./image/fourty/fourty14.jpg" alt="" class="pics">
-          </div>
-          <div class="fourtyPics">
-            <img src="./image/fourty/fourty15.jpg" alt="" class="pics">
-          </div>
-          <div class="fourtyPics">
-            <img src="./image/fourty/fourty17.jpg" alt="" class="pics">
-          </div>
-        </div>
-      </div>
-
-      <!--最惨奖-->
-      <div class="zuican">
-        <img src="./image/end/zuican.jpg" alt="">
-      </div>
-
-      <!--dog-->
-      <div class="dog">
-        <img src="./image/end/liedog.jpg" alt="">
-      </div>
-
-      <!--特色-->
-      <div class="tese">
-        <img src="./image/end/xingqiu.jpg" alt="">
-      </div>
-
-      <div class="chaopin">
-        <div class="cpSell">
-          <img src="./image/end/aroundSell.jpg" alt="">
-        </div>
-        <div class="huoDong">
-          <img src="./image/end/cpVideo.jpg" alt="">
-          <img src="./image/end/mzlm.jpg" alt="">
-        </div>
-      </div>
-
-      <!--栏目-->
-      <div class="lanmu">
-        <img src="./image/end/tese.jpg" alt="">
-      </div>
-
-      <!--colorful-->
-      <div class="colorful">
-        <div class="stair01">
-          <div class="stairsPics"><img src="./image/stairs/stairs01.jpg" alt=""></div>
-          <div class="stairsPics"><img src="./image/stairs/stairs02.jpg" alt=""></div>
-          <div class="stairsPics"><img src="./image/stairs/stairs03.jpg" alt=""></div>
-          <div class="stairsPics"><img src="./image/stairs/stairs04.jpg" alt=""></div>
-          <div class="stairsPics"><img src="./image/stairs/stairs05.jpg" alt=""></div>
-          <div class="stairsPics"><img src="./image/stairs/stairs06.jpg" alt=""></div>
-        </div>
-      </div>
-
-      <!--HeaderFinal-->
-      <footer>
-        <div class="nav on">
-          <span class="on">触屏版</span>
-          <span>手机客户端</span>
-          <span>关于我们</span>
-          <span>联系我们</span>
-          <span>&#169wap.epet.com 版权:</span>
-          <span>重庆易宠科技有限公司</span>
-        </div>
-      </footer>
+      <div class="swiper-pagination"></div>
     </div>
+
+    <!--紧贴轮播的静态图-->
+    <div class="kpMoving">
+      <img src="./image/keepmoving.jpg" alt="">
+    </div>
+
+    <!--10个分功能-->
+    <div class="ten">
+      <!--上面5张图-->
+      <div class="front">
+        <div class="frontImg"><img src="./image/ePet01.jpg" alt=""></div>
+        <div class="frontImg"><img src="./image/ePet02.jpg" alt=""></div>
+        <div class="frontImg"><img src="./image/ePet03.jpg" alt=""></div>
+        <div class="frontImg"><img src="./image/ePet04.jpg" alt=""></div>
+        <div class="frontImg"><img src="./image/ePet05.jpg" alt=""></div>
+      </div>
+
+      <!--下面5张图-->
+      <div class="behind">
+        <div class="behindImg"><img src="./image/ePet06.jpg" alt=""></div>
+        <div class="behindImg"><img src="./image/ePet07.jpg" alt=""></div>
+        <div class="behindImg"><img src="./image/ePet08.jpg" alt=""></div>
+        <div class="behindImg"><img src="./image/ePet09.jpg" alt=""></div>
+        <div class="behindImg"><img src="./image/ePet10.jpg" alt=""></div>
+      </div>
+    </div>
+
+    <!--秒杀图片1-->
+    <div class="mKill">
+      <img src="./image/miaosha.jpg" alt="">
+    </div>
+
+    <!--倒计时秒杀图片与文字-->
+    <div class="crazyShopMarket">
+      <!--左侧图片每日疯抢-->
+      <div class="crazyShop">
+        <img src="./image/crazyShop.png" alt="">
+      </div>
+
+      <!--右侧倒计时-->
+      <div class="limit">
+        下一场开始
+        <span class="hour">16</span>
+        <span>:</span>
+        <span class="minute">00</span>
+      </div>
+
+      <!--更多-->
+      <div class="more">
+        <img src="./image/more.png" alt="">
+      </div>
+    </div>
+
+    <!--倒计时秒杀商品-->
+    <div class="fastKill swiper-container">
+
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">
+          <img src="./image/goods01.jpg" alt="">
+          <span class="price">￥0.99</span>
+          <span class="cheap">省8.91</span>
+        </div>
+
+        <div class="swiper-slide">
+          <img src="./image/goods02.jpg" alt="">
+          <span class="price">￥0.99</span>
+          <span class="cheap">省8.91</span>
+        </div>
+
+        <div class="swiper-slide">
+          <img src="./image/goods03.jpg" alt="">
+          <span class="price">￥0.99</span>
+          <span class="cheap">省8.91</span>
+        </div>
+
+        <div class="swiper-slide">
+          <img src="./image/goods04.jpg" alt="">
+          <span class="price">￥0.99</span>
+          <span class="cheap"> 省8.91</span>
+        </div>
+
+        <div class="swiper-slide">
+          <img src="./image/goods05.jpg" alt="">
+          <span class="price">￥0.99</span>
+          <span class="cheap">省8.91</span>
+        </div>
+
+        <div class="swiper-slide">
+          <img src="./image/goods06.jpg" alt="">
+          <span class="price">￥0.99</span>
+          <span class="cheap">省8.91</span>
+        </div>
+
+        <div class="swiper-slide">
+          <img src="./image/goods07.jpg" alt="">
+          <span class="price">￥0.99</span>
+          <span class="cheap">省8.91</span>
+        </div>
+      </div>
+    </div>
+
+    <!--品牌力量-->
+    <div class="power">
+      <img src="./image/power.jpg" alt="">
+    </div>
+
+    <!--多人动态图-->
+    <div class="people">
+      <img src="./image/people.gif" alt="">
+    </div>
+
+    <!--vip-->
+    <div class="vip">
+      <img src="./image/vip.jpg" alt="">
+    </div>
+
+    <!--综合服务-->
+    <div class="serviceArea">
+      <div class="areaUp">
+        <div class="areaUpPics"><img src="./image/service/vstar.jpg" alt=""></div>
+        <div class="areaUpPics"><img src="./image/service/hospital.jpg" alt=""></div>
+      </div>
+      <div class="areaDown">
+        <div class="areaDownPics"><img src="./image/service/around.jpg" alt=""></div>
+        <div class="areaDownPics"><img src="./image/service/treat.jpg" alt=""></div>
+      </div>
+    </div>
+
+    <!--大牌1折-->
+    <div class="dapai01">
+      <img src="./image/dpLunbo/dapai01.jpg" alt="">
+    </div>
+
+    <!--大牌轮播-->
+    <div class="dpLunbo swiper-container">
+
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">
+          <img src="./image/dpLunbo/dp01.jpg" alt="">
+        </div>
+
+        <div class="swiper-slide">
+          <img src="./image/dpLunbo/dp02.jpg" alt="">
+        </div>
+
+        <div class="swiper-slide">
+          <img src="./image/dpLunbo/dp03.jpg" alt="">
+        </div>
+
+        <div class="swiper-slide">
+          <img src="./image/dpLunbo/dp04.jpg" alt="">
+        </div>
+
+        <div class="swiper-slide">
+          <img src="./image/dpLunbo/dp05.jpg" alt="">
+        </div>
+
+        <div class="swiper-slide">
+          <img src="./image/dpLunbo/dp06.jpg" alt="">
+        </div>
+      </div>
+    </div>
+
+    <!--大牌好货-->
+    <div class="dpGoods">
+      <img src="./image/dpLunbo/dapai02.jpg" alt="">
+    </div>
+
+    <!--many pictures-->
+    <div class="picsArea">
+      <div class="picsF">
+        <div class="fourtyPics">
+          <img src="./image/fourty/fourty01.jpg" alt="" class="pics">
+        </div>
+        <div class="fourtyPics">
+          <img src="./image/fourty/fourty02.jpg" alt="" class="pics">
+        </div>
+        <div class="fourtyPics">
+          <img src="./image/fourty/fourty03.jpg" alt="" class="pics">
+        </div>
+        <div class="fourtyPics">
+          <img src="./image/fourty/fourty04.jpg" alt="" class="pics">
+        </div>
+        <div class="fourtyPics">
+          <img src="./image/fourty/fourty18.jpg" alt="" class="pics">
+        </div>
+        <div class="fourtyPics">
+          <img src="./image/fourty/fourty06.jpg" alt="" class="pics">
+        </div>
+        <div class="fourtyPics">
+          <img src="./image/fourty/fourty07.jpg" alt="" class="pics">
+        </div>
+        <div class="fourtyPics">
+          <img src="./image/fourty/fourty08.jpg" alt="" class="pics">
+        </div>
+        <div class="fourtyPics">
+          <img src="./image/fourty/fourty09.jpg" alt="" class="pics">
+        </div>
+        <div class="fourtyPics">
+          <img src="./image/fourty/fourty10.jpg" alt="" class="pics">
+        </div>
+        <div class="fourtyPics">
+          <img src="./image/fourty/fourty11.jpg" alt="" class="pics">
+        </div>
+        <div class="fourtyPics">
+          <img src="./image/fourty/fourty12.jpg" alt="" class="pics">
+        </div>
+        <div class="fourtyPics">
+          <img src="./image/fourty/fourty13.jpg" alt="" class="pics">
+        </div>
+        <div class="fourtyPics">
+          <img src="./image/fourty/fourty14.jpg" alt="" class="pics">
+        </div>
+        <div class="fourtyPics">
+          <img src="./image/fourty/fourty15.jpg" alt="" class="pics">
+        </div>
+        <div class="fourtyPics">
+          <img src="./image/fourty/fourty17.jpg" alt="" class="pics">
+        </div>
+      </div>
+    </div>
+
+    <!--最惨奖-->
+    <div class="zuican">
+      <img src="./image/end/zuican.jpg" alt="">
+    </div>
+
+    <!--dog-->
+    <div class="dog">
+      <img src="./image/end/liedog.jpg" alt="">
+    </div>
+
+    <!--特色-->
+    <div class="tese">
+      <img src="./image/end/xingqiu.jpg" alt="">
+    </div>
+
+    <div class="chaopin">
+      <div class="cpSell">
+        <img src="./image/end/aroundSell.jpg" alt="">
+      </div>
+      <div class="huoDong">
+        <img src="./image/end/cpVideo.jpg" alt="">
+        <img src="./image/end/mzlm.jpg" alt="">
+      </div>
+    </div>
+
+    <!--栏目-->
+    <div class="lanmu">
+      <img src="./image/end/tese.jpg" alt="">
+    </div>
+
+    <!--colorful-->
+    <div class="colorful">
+      <div class="stair01">
+        <div class="stairsPics"><img src="./image/stairs/stairs01.jpg" alt=""></div>
+        <div class="stairsPics"><img src="./image/stairs/stairs02.jpg" alt=""></div>
+        <div class="stairsPics"><img src="./image/stairs/stairs03.jpg" alt=""></div>
+        <div class="stairsPics"><img src="./image/stairs/stairs04.jpg" alt=""></div>
+        <div class="stairsPics"><img src="./image/stairs/stairs05.jpg" alt=""></div>
+        <div class="stairsPics"><img src="./image/stairs/stairs06.jpg" alt=""></div>
+      </div>
+    </div>
+
+    <!--HeaderFinal-->
+    <footer>
+      <div class="nav on">
+        <span class="on">触屏版</span>
+        <span>手机客户端</span>
+        <span>关于我们</span>
+        <span>联系我们</span>
+        <span>&#169wap.epet.com 版权:</span>
+        <span>重庆易宠科技有限公司</span>
+      </div>
+    </footer>
+  </div>
 </template>
 
 <script>
-    import Swiper from 'swiper'
-    import 'swiper/dist/css/swiper.min.css'
-    export default{
-        mounted(){
-          new Swiper('.special',{
-            loop:true,
-            autoplay:true,
-            delay:300,
-            pagination:{
-                el:'.swiper-pagination',
-                clickable:true
-            }
-
-          });
-
-          new Swiper('.fastKill', {
-            slidesPerView:3.5,
-            spaceBetween:30,
-          })
-
-          new Swiper('.dpLunbo', {
-            loop:true,
-            autoplay:true,
-            delay:300,
-            pagination:{
-              el:'.swiper-pagination',
-              clickable:true
-            }
-          })
-
+  import Swiper from 'swiper'
+  import 'swiper/dist/css/swiper.min.css'
+  import {mapState} from 'vuex'
+  export default{
+    mounted(){
+      new Swiper('.special',{
+        loop:true,
+        autoplay:true,
+        delay:300,
+        pagination:{
+          el:'.swiper-pagination',
+          clickable:true
         }
+
+      });
+
+      new Swiper('.fastKill', {
+        slidesPerView:3.5,
+        spaceBetween:30,
+      })
+
+      new Swiper('.dpLunbo', {
+        loop:true,
+        autoplay:true,
+        delay:300,
+        pagination:{
+          el:'.swiper-pagination',
+          clickable:true
+        }
+      })
+
+      this.$store.dispatch('getHomepage',() =>{
+
+      })
+
+    },
+    computed:{
+      ...mapState(['homepage'])
     }
+  }
 </script>
 
 <style lang="stylus" rel="stylesheet/stylus">
@@ -484,7 +486,6 @@
     .ten
       width 100%
       height 100%
-      //display flex
       .front
         width 100%
         height 100%
@@ -530,10 +531,10 @@
         .minute
           border 1px solid
       .more
-         float left
-         width 18%
-        img
-          vertical-align middle
+        float left
+        width 18%
+      img
+        vertical-align middle
     .fastKill
       padding-bottom 10px
       background #ffffff
@@ -557,9 +558,9 @@
         .swiper-slide
           width 100%
           height 100%
-         >img
-            width 100%
-            height 100%
+        >img
+          width 100%
+          height 100%
 
 
     .power

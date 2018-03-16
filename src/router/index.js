@@ -42,6 +42,10 @@ export default new VueRouter({
         {
           path:'type',
           component:Type
+        },
+        {
+          path: '',
+          redirect: '/pettype/type'
         }
 
       ]

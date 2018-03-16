@@ -6,12 +6,14 @@ import router from './router'
 
 import App from './App.vue'
 
+import store from './store'
 
-
+import './Mock/MockServer'
 
 /* eslint-disable no-new */
 new Vue({
   el: '#app',
   router,
-  render:h => h(App)
+  render:h => h(App),
+  store
 })

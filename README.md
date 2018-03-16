@@ -77,3 +77,30 @@ day02:
     *animation-fill-mode
     *animation-play-state
 
+
+day03:
+    当前进度:
+      首页与第二页静态页面基本搞完
+
+    不足:
+      感觉布局还是有点不熟练。不过今天该实现的效果基本都实现了
+
+    需要记住:
+      (1)有时候有些实现过的效果再看时出现异常。极有可能出现“丢包”这个故障。这个时候把原来残留的swiper包
+      卸载掉。重新下载。或许可以解决
+      (2)有时候从后台引入数据到前台显示。但是没有显示。看vuex插件或是显示undefined。那么此时极有可能
+      出现非常Low的错误。就是入口文件那里你没有引入Mockjs(或是相关文件)。要足够细心。
+      (3)sometimes you need to throw something(What include you should know it)
+      有些命令需要记住:
+      npm install --save vuex 下载vuex
+      npm install mockjs --save 引入mockjs
+      npm install --save axios  引入axios用来前后台交互ajax
+      卸载包
+      npm r 报名例如:
+      npm r swiper
+
+
+
+
+
+
