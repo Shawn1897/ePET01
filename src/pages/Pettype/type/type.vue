@@ -4,81 +4,94 @@
       <!--左侧分类-->
       <div class="menu-Wrapper">
         <ul >
-
-          <li class="menu-item current">
+          <li class="menu-item current" v-for="(names,index) in category" :key="index">
           <span class="text bottom-border-1px">
-            为您推荐
-          </span>
-          </li>
-          <li class="menu-item ">
-          <span class="text bottom-border-1px">
-            狗狗主粮
-          </span>
-          </li>
-          <li class="menu-item ">
-          <span class="text bottom-border-1px">
-            狗狗零食
-          </span>
-          </li>
-          <li class="menu-item ">
-          <span class="text bottom-border-1px">
-            狗狗服饰
+            {{names.name}}
           </span>
           </li>
         </ul>
+        <div class="empty">
+
+        </div>
       </div>
 
       <!--右侧商品-->
+      <!--<div class="foods-Wrapper" v-for="(obj,index) in category" :key="index">-->
+        <!--<ul class="foods-WrapperUl" v-for="(cate,index) in obj.cate_list">-->
+          <!--<a>{{cate.title}}</a>-->
+          <!--<li class="food-list food-list-hook" v-for="(list,index) in cate">-->
+            <!--<img :src="list.photo || list.logo" alt="">-->
+            <!--<p>{{list.name}}</p>-->
+          <!--</li>-->
+
+        <!--</ul>-->
+      <!--</div>-->
       <div class="foods-Wrapper">
-        <ul class="foods-WrapperUl">
-          <h1 >热门分类</h1>
-          <li class="food-list food-list-hook">
-            <img src="../pinpai/food01.jpg" alt="">
-            <p>进口狗粮</p>
-          </li>
-          <li class="food-list food-list-hook">
-            <img src="../pinpai/food01.jpg" alt="">
-            <p>进口狗粮</p>
-          </li>
-          <li class="food-list food-list-hook">
-            <img src="../pinpai/food01.jpg" alt="">
-            <p>进口狗粮</p>
-          </li>
-        </ul>
+
+        <!-- 放三列的 -->
+        <div>
+          <!-- 上方文字 -->
+          <div>
+
+          </div>
+
+          <!-- 下方图片 -->
+          <div>
+            <!-- 包裹图片和描述 -->
+              <div>
+                <div>
+                  <img src="" alt="">
+                </div>
+                <p></p>
+              </div>
+          </div>
+
+        </div>
+
+        <!-- 放两列的 -->
+        <div>
+
+        </div>
       </div>
 
     </div>
 </template>
 
 <script>
+  import {mapState} from 'vuex'
     export default{
+      mounted(){
+          this.$store.dispatch('getCategory',() =>{
 
+          })
+      },
+
+      computed:{
+        ...mapState(['category'])
+      }
     }
 </script>
 
 <style lang="stylus" rel="stylesheet/stylus">
   .type
     display: flex
-    position: absolute
     top: 42px
     bottom: 46px
     width: 100%
     overflow: hidden
     .menu-Wrapper
-      flex: 0 0 80px
-      width: 80px
+      width:20%
       background: #f3f5f7
+      >div
+        height 46px
+        width 100%
       .menu-item
-        display: table
+        width 100%
         height: 30px
-        width: 66px
         padding: 12px 12px
         line-height: 29px
         background #ffffff
         &.current
-          position relative
-          top 1px
-          z-index 10
           margin-top -1px
           background #f3f4f5
           color: red
@@ -95,4 +108,14 @@
           width 32%
           height 100%
           text-align center
+          .foods-WrapperUlItemThree
+            >a
+              display block
+              .food-item
+                .imgBox
+                  float left
+                  >img
+                    display block
+
+
 </style>

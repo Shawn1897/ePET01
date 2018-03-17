@@ -40,57 +40,40 @@
     <!--轮播-->
     <div class="special swiper-container">
       <div class="swiper-wrapper">
-        <div class="swiper-slide">
-          <img src="./image/swiper01.jpg" alt="">
+        <div class="swiper-slide" v-for="(pics,index) in homepage.dog_banner" :key="index">
+          <img :src="pics" alt="">
         </div>
-        <div class="swiper-slide">
-          <img src="./image/swiper02.jpg" alt="">
-        </div>
-        <div class="swiper-slide">
-          <img src="./image/swiper03.jpg" alt="">
-        </div>
-        <div class="swiper-slide">
-          <img src="./image/swiper04.jpg" alt="">
-        </div>
-        <div class="swiper-slide">
-          <img src="./image/swiper05.jpg" alt="">
-        </div>
-        <div class="swiper-slide">
-          <img src="./image/swiper06.jpg" alt="">
-        </div>
+
       </div>
       <div class="swiper-pagination"></div>
     </div>
 
     <!--紧贴轮播的静态图-->
     <div class="kpMoving">
-      <img src="./image/keepmoving.jpg" alt="">
+      <img :src="homepage.dog_img" alt="">
     </div>
 
     <!--10个分功能-->
     <div class="ten">
       <!--上面5张图-->
       <div class="front">
-        <div class="frontImg"><img src="./image/ePet01.jpg" alt=""></div>
-        <div class="frontImg"><img src="./image/ePet02.jpg" alt=""></div>
-        <div class="frontImg"><img src="./image/ePet03.jpg" alt=""></div>
-        <div class="frontImg"><img src="./image/ePet04.jpg" alt=""></div>
-        <div class="frontImg"><img src="./image/ePet05.jpg" alt=""></div>
+        <div class="frontImg" v-for="(value,index) in homepage.menu_list"><img :src="value" alt=""></div>
+
       </div>
 
-      <!--下面5张图-->
-      <div class="behind">
-        <div class="behindImg"><img src="./image/ePet06.jpg" alt=""></div>
-        <div class="behindImg"><img src="./image/ePet07.jpg" alt=""></div>
-        <div class="behindImg"><img src="./image/ePet08.jpg" alt=""></div>
-        <div class="behindImg"><img src="./image/ePet09.jpg" alt=""></div>
-        <div class="behindImg"><img src="./image/ePet10.jpg" alt=""></div>
-      </div>
+      <!--&lt;!&ndash;下面5张图&ndash;&gt;-->
+      <!--<div class="behind">-->
+        <!--<div class="behindImg"><img src="./image/ePet06.jpg" alt=""></div>-->
+        <!--<div class="behindImg"><img src="./image/ePet07.jpg" alt=""></div>-->
+        <!--<div class="behindImg"><img src="./image/ePet08.jpg" alt=""></div>-->
+        <!--<div class="behindImg"><img src="./image/ePet09.jpg" alt=""></div>-->
+        <!--<div class="behindImg"><img src="./image/ePet10.jpg" alt=""></div>-->
+      <!--</div>-->
     </div>
 
     <!--秒杀图片1-->
     <div class="mKill">
-      <img src="./image/miaosha.jpg" alt="">
+      <img :src="homepage.miaosha" alt="">
     </div>
 
     <!--倒计时秒杀图片与文字-->
@@ -164,170 +147,93 @@
 
     <!--品牌力量-->
     <div class="power">
-      <img src="./image/power.jpg" alt="">
+      <img :src="homepage.brand_power" alt="">
     </div>
 
     <!--多人动态图-->
     <div class="people">
-      <img src="./image/people.gif" alt="">
+      <img :src="homepage.gif" alt="">
     </div>
 
     <!--vip-->
     <div class="vip">
-      <img src="./image/vip.jpg" alt="">
+      <img :src="homepage.vip" alt="">
     </div>
 
     <!--综合服务-->
     <div class="serviceArea">
-      <div class="areaUp">
-        <div class="areaUpPics"><img src="./image/service/vstar.jpg" alt=""></div>
-        <div class="areaUpPics"><img src="./image/service/hospital.jpg" alt=""></div>
-      </div>
-      <div class="areaDown">
-        <div class="areaDownPics"><img src="./image/service/around.jpg" alt=""></div>
-        <div class="areaDownPics"><img src="./image/service/treat.jpg" alt=""></div>
+      <div class="areaUp" v-for="(area,index) in homepage.vip_services">
+        <div class="areaUpPics"><img :src="area" alt=""></div>
       </div>
     </div>
 
     <!--大牌1折-->
     <div class="dapai01">
-      <img src="./image/dpLunbo/dapai01.jpg" alt="">
+      <img :src="homepage.dapaituan" alt="">
     </div>
 
     <!--大牌轮播-->
     <div class="dpLunbo swiper-container">
-
       <div class="swiper-wrapper">
-        <div class="swiper-slide">
-          <img src="./image/dpLunbo/dp01.jpg" alt="">
-        </div>
-
-        <div class="swiper-slide">
-          <img src="./image/dpLunbo/dp02.jpg" alt="">
-        </div>
-
-        <div class="swiper-slide">
-          <img src="./image/dpLunbo/dp03.jpg" alt="">
-        </div>
-
-        <div class="swiper-slide">
-          <img src="./image/dpLunbo/dp04.jpg" alt="">
-        </div>
-
-        <div class="swiper-slide">
-          <img src="./image/dpLunbo/dp05.jpg" alt="">
-        </div>
-
-        <div class="swiper-slide">
-          <img src="./image/dpLunbo/dp06.jpg" alt="">
+        <div class="swiper-slide" v-for="(dapai,index) in homepage.dapaituan_list">
+          <img :src="dapai" alt="">
         </div>
       </div>
     </div>
 
     <!--大牌好货-->
     <div class="dpGoods">
-      <img src="./image/dpLunbo/dapai02.jpg" alt="">
+      <img :src="homepage.haohuo" >
     </div>
 
     <!--many pictures-->
     <div class="picsArea">
       <div class="picsF">
-        <div class="fourtyPics">
-          <img src="./image/fourty/fourty01.jpg" alt="" class="pics">
+        <div class="fourtyPics" v-for="(many,index) in homepage.haohuo_list" :key="index">
+          <img :src="many">
         </div>
-        <div class="fourtyPics">
-          <img src="./image/fourty/fourty02.jpg" alt="" class="pics">
-        </div>
-        <div class="fourtyPics">
-          <img src="./image/fourty/fourty03.jpg" alt="" class="pics">
-        </div>
-        <div class="fourtyPics">
-          <img src="./image/fourty/fourty04.jpg" alt="" class="pics">
-        </div>
-        <div class="fourtyPics">
-          <img src="./image/fourty/fourty18.jpg" alt="" class="pics">
-        </div>
-        <div class="fourtyPics">
-          <img src="./image/fourty/fourty06.jpg" alt="" class="pics">
-        </div>
-        <div class="fourtyPics">
-          <img src="./image/fourty/fourty07.jpg" alt="" class="pics">
-        </div>
-        <div class="fourtyPics">
-          <img src="./image/fourty/fourty08.jpg" alt="" class="pics">
-        </div>
-        <div class="fourtyPics">
-          <img src="./image/fourty/fourty09.jpg" alt="" class="pics">
-        </div>
-        <div class="fourtyPics">
-          <img src="./image/fourty/fourty10.jpg" alt="" class="pics">
-        </div>
-        <div class="fourtyPics">
-          <img src="./image/fourty/fourty11.jpg" alt="" class="pics">
-        </div>
-        <div class="fourtyPics">
-          <img src="./image/fourty/fourty12.jpg" alt="" class="pics">
-        </div>
-        <div class="fourtyPics">
-          <img src="./image/fourty/fourty13.jpg" alt="" class="pics">
-        </div>
-        <div class="fourtyPics">
-          <img src="./image/fourty/fourty14.jpg" alt="" class="pics">
-        </div>
-        <div class="fourtyPics">
-          <img src="./image/fourty/fourty15.jpg" alt="" class="pics">
-        </div>
-        <div class="fourtyPics">
-          <img src="./image/fourty/fourty17.jpg" alt="" class="pics">
-        </div>
+        <!--<div class="fourtyPics" v-for="(each) in many.right">
+          <img :src="each" alt="" class="pics">
+        </div>-->
       </div>
     </div>
 
     <!--最惨奖-->
     <div class="zuican">
-      <img src="./image/end/zuican.jpg" alt="">
+      <img :src="homepage.zuican" alt="">
     </div>
 
     <!--dog-->
     <div class="dog">
-      <img src="./image/end/liedog.jpg" alt="">
+      <img :src="homepage.zuican_content" alt="">
     </div>
 
-    <!--特色-->
+    <!--特别星球-->
     <div class="tese">
-      <img src="./image/end/xingqiu.jpg" alt="">
+      <img :src="homepage.special" alt="">
     </div>
 
     <div class="chaopin">
-      <div class="cpSell">
-        <img src="./image/end/aroundSell.jpg" alt="">
-      </div>
-      <div class="huoDong">
-        <img src="./image/end/cpVideo.jpg" alt="">
-        <img src="./image/end/mzlm.jpg" alt="">
+      <div class="cpSell" v-for="(star,index) in homepage.special_list">
+        <img :src="star" alt="">
       </div>
     </div>
 
     <!--栏目-->
     <div class="lanmu">
-      <img src="./image/end/tese.jpg" alt="">
+      <img :src="homepage.lanmu" alt="">
     </div>
 
     <!--colorful-->
     <div class="colorful">
-      <div class="stair01">
-        <div class="stairsPics"><img src="./image/stairs/stairs01.jpg" alt=""></div>
-        <div class="stairsPics"><img src="./image/stairs/stairs02.jpg" alt=""></div>
-        <div class="stairsPics"><img src="./image/stairs/stairs03.jpg" alt=""></div>
-        <div class="stairsPics"><img src="./image/stairs/stairs04.jpg" alt=""></div>
-        <div class="stairsPics"><img src="./image/stairs/stairs05.jpg" alt=""></div>
-        <div class="stairsPics"><img src="./image/stairs/stairs06.jpg" alt=""></div>
+      <div class="stair01" v-for="(list,index) in homepage.lanmu_list">
+        <div class="stairsPics"><img :src="list" alt=""></div>
       </div>
     </div>
 
     <!--HeaderFinal-->
     <footer>
-      <div class="nav on">
+      <div class="nav ">
         <span class="on">触屏版</span>
         <span>手机客户端</span>
         <span>关于我们</span>
@@ -345,39 +251,56 @@
   import {mapState} from 'vuex'
   export default{
     mounted(){
-      new Swiper('.special',{
-        loop:true,
-        autoplay:true,
-        delay:300,
-        pagination:{
-          el:'.swiper-pagination',
-          clickable:true
-        }
 
-      });
-
-      new Swiper('.fastKill', {
-        slidesPerView:3.5,
-        spaceBetween:30,
-      })
-
-      new Swiper('.dpLunbo', {
-        loop:true,
-        autoplay:true,
-        delay:300,
-        pagination:{
-          el:'.swiper-pagination',
-          clickable:true
-        }
-      })
 
       this.$store.dispatch('getHomepage',() =>{
 
+          this.$nextTick( () =>{
+
+            //首页第一个轮播
+            new Swiper('.special',{
+              loop:true,
+              autoplay:true,
+              delay:300,
+              pagination:{
+                el:'.swiper-pagination',
+                clickable:true
+              }
+
+            });
+
+            //秒杀拉弹簧
+            new Swiper('.fastKill', {
+              slidesPerView:3.5,
+              spaceBetween:30,
+            })
+
+            //大牌轮播
+            new Swiper('.dpLunbo', {
+              loop:true,
+              autoplay:true,
+              delay:300,
+              pagination:{
+                el:'.swiper-pagination',
+                clickable:true
+              }
+            })
+
+            //（1）前台页面动态获取数据，发送ajax请求、然后action异步获取数据,接着commit到mutations。更新state中
+            //相对应的数据。在任何一个组建中获得state中更新好的数据。然后进行数据读取
+
+          })
       })
 
     },
     computed:{
       ...mapState(['homepage'])
+    },
+
+    watch:{
+
+
+
     }
   }
 </script>
@@ -637,10 +560,12 @@
       .picsF
         width 100%
         height 100%
+        overflow hidden
         .fourtyPics
           width 50%
-          height 100%
           float left
+          height 225px
+          box-sizing border-box
           >img
             width 100%
             height 100%
@@ -694,6 +619,8 @@
     .colorful
       width 100%
       height 100%
+      overflow hidden
+      padding-bottom 46px
       .stair01
         width 100%
         height 100%
@@ -703,10 +630,13 @@
           height 100%
           >img
             width 100%
-            height 100%
+            height 118px
             display block
     footer
-      padding 80px 0
+      padding-bottom 35px
+      position relative
+      bottom 46px
+      overflow hidden
       background #ffffff
       .nav
         text-align center

@@ -100,6 +100,25 @@ day03:
       npm r swiper
 
 
+day04:
+    今天遇到的问题:
+    (1)轮播处理不当。在v-for遍历数据的时候。要清楚数据的一个“整体结构”。比如刚刚碰到的轮播。最开始的
+    时候。你在div里v-for只写了v-for="(pics,index) in dog_banner"。请记住,data.json里对应的
+    对象名称叫homepage。像第二行的这种写法。你没有个homepage(homepage.dog_banner)。绝对是错误的
+    所以,记住。下次有类似情况。引用数据一定要"引齐"。
+    (2)Vue中基本的前后端交互流程。前台动态获取数据，发送ajax请求，action异步获取数据,commit到mutations。
+    更新state中相对应的数据。最后通过mapState获取Vuex Store中更新好的state数据。然后任何一个组建中获得
+    state中更新好的数据。即可数据读取
+
+    (3)有关首页10个服务(图片)的数据遍历。你需要知道(其实第一个轮播图片的时候你就应该知道)。除了第(1)
+    条提到的(这也算是对第(1)条进行完善),你在v-for遍历之后,你需要在(在有的情况下)图片链接处(将src变成
+    :src,这点必须做。这叫动态链接):src处写上v-for中相对应的"数据"。比如
+    v-for="(pics,index) in homepage.dog_banner"中的图片链接,你需要写<img :src="pics" >
+    v-for="(value,index) in homepage.menu_list"中的图片链接,你需要写<img :src="value" >
+    (4)说一下首页那几个轮播实现的原理。因为那几个轮播(或是拉弹簧)都是用的swiper,
+
+
+
 
 
 
