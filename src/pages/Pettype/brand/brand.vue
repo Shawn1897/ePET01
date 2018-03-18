@@ -1,375 +1,16 @@
 <template>
     <div class="brand">
 
-      <div class="header01">
+      <div class="header01" v-for="(pinpai,index) in brand" :key="index">
         <div class="headerTitle">
-          <span class="title">——推荐品牌——</span>
+          <span class="title">——{{pinpai.title}}—</span>
         </div>
 
-        <div class="tj01">
+        <div class="tj01" v-for="(list,index) in pinpai.list">
           <div class="tjpics">
-            <img src="../pinpai/pinpai04.jpg" alt="">
-            <p class="p1">冠能</p>
-            <p class="p2">美国</p>
-          </div>
-          <div class="tjpics">
-            <img src="../pinpai/pinpai04.jpg" alt="">
-            <p class="p1">冠能</p>
-            <p class="p2">美国</p>
-          </div>
-          <div class="tjpics">
-            <img src="../pinpai/pinpai04.jpg" alt="">
-            <p class="p1">冠能</p>
-            <p class="p2">美国</p>
-          </div>
-          <div class="tjpics">
-            <img src="../pinpai/pinpai04.jpg" alt="">
-            <p class="p1">冠能</p>
-            <p class="p2">美国</p>
-          </div>
-          <div class="tjpics">
-            <img src="../pinpai/pinpai04.jpg" alt="">
-            <p class="p1">冠能</p>
-            <p class="p2">美国</p>
-          </div>
-          <div class="tjpics">
-            <img src="../pinpai/pinpai04.jpg" alt="">
-            <p class="p1">冠能</p>
-            <p class="p2">美国</p>
-          </div>
-          <div class="tjpics">
-            <img src="../pinpai/pinpai04.jpg" alt="">
-            <p class="p1">冠能</p>
-            <p class="p2">美国</p>
-          </div>
-          <div class="tjpics">
-            <img src="../pinpai/pinpai04.jpg" alt="">
-            <p class="p1">冠能</p>
-            <p class="p2">美国</p>
-          </div>
-          <div class="tjpics">
-            <img src="../pinpai/pinpai04.jpg" alt="">
-            <p class="p1">冠能</p>
-            <p class="p2">美国</p>
-          </div>
-          <div class="tjpics">
-            <img src="../pinpai/pinpai04.jpg" alt="">
-            <p class="p1">冠能</p>
-            <p class="p2">美国</p>
-          </div>
-          <div class="tjpics">
-            <img src="../pinpai/pinpai04.jpg" alt="">
-            <p class="p1">冠能</p>
-            <p class="p2">美国</p>
-          </div>
-
-        </div>
-      </div>
-
-      <div class="header02">
-        <div class="headerTitle">
-          <span class="title">——主粮品牌——</span>
-        </div>
-
-        <div class="tj01">
-          <div class="tjpics">
-            <img src="../pinpai/pinpai03.jpg" alt="">
-            <p class="p1">麦高臣</p>
-            <p class="p2">美国</p>
-          </div>
-          <div class="tjpics">
-            <img src="../pinpai/pinpai03.jpg" alt="">
-            <p class="p1">麦高臣</p>
-            <p class="p2">美国</p>
-          </div>
-          <div class="tjpics">
-            <img src="../pinpai/pinpai03.jpg" alt="">
-            <p class="p1">麦高臣</p>
-            <p class="p2">美国</p>
-          </div>
-          <div class="tjpics">
-            <img src="../pinpai/pinpai03.jpg" alt="">
-            <p class="p1">麦高臣</p>
-            <p class="p2">美国</p>
-          </div>
-          <div class="tjpics">
-            <img src="../pinpai/pinpai03.jpg" alt="">
-            <p class="p1">麦高臣</p>
-            <p class="p2">美国</p>
-          </div>
-          <div class="tjpics">
-            <img src="../pinpai/pinpai03.jpg" alt="">
-            <p class="p1">麦高臣</p>
-            <p class="p2">美国</p>
-          </div>
-          <div class="tjpics">
-            <img src="../pinpai/pinpai03.jpg" alt="">
-            <p class="p1">麦高臣</p>
-            <p class="p2">美国</p>
-          </div>
-          <div class="tjpics">
-            <img src="../pinpai/pinpai03.jpg" alt="">
-            <p class="p1">麦高臣</p>
-            <p class="p2">美国</p>
-          </div>
-          <div class="tjpics">
-            <img src="../pinpai/pinpai03.jpg" alt="">
-            <p class="p1">麦高臣</p>
-            <p class="p2">美国</p>
-          </div>
-          <div class="tjpics">
-            <img src="../pinpai/pinpai03.jpg" alt="">
-            <p class="p1">麦高臣</p>
-            <p class="p2">美国</p>
-          </div>
-          <div class="tjpics">
-            <img src="../pinpai/pinpai03.jpg" alt="">
-            <p class="p1">麦高臣</p>
-            <p class="p2">美国</p>
-          </div>
-          <div class="tjpics">
-            <img src="../pinpai/pinpai03.jpg" alt="">
-            <p class="p1">麦高臣</p>
-            <p class="p2">美国</p>
-          </div>
-
-        </div>
-      </div>
-
-      <div class="header03">
-        <div class="headerTitle">
-          <span class="title">——零食品牌——</span>
-        </div>
-
-        <div class="tj01">
-          <div class="tjpics">
-            <img src="../pinpai/pinpai02.jpg" alt="">
-            <p class="p1">MAG</p>
-            <p class="p2">英国</p>
-          </div>
-          <div class="tjpics">
-            <img src="../pinpai/pinpai02.jpg" alt="">
-            <p class="p1">MAG</p>
-            <p class="p2">英国</p>
-          </div>
-          <div class="tjpics">
-            <img src="../pinpai/pinpai02.jpg" alt="">
-            <p class="p1">MAG</p>
-            <p class="p2">英国</p>
-          </div>
-          <div class="tjpics">
-            <img src="../pinpai/pinpai02.jpg" alt="">
-            <p class="p1">MAG</p>
-            <p class="p2">英国</p>
-          </div>
-          <div class="tjpics">
-            <img src="../pinpai/pinpai02.jpg" alt="">
-            <p class="p1">MAG</p>
-            <p class="p2">英国</p>
-          </div>
-          <div class="tjpics">
-            <img src="../pinpai/pinpai02.jpg" alt="">
-            <p class="p1">MAG</p>
-            <p class="p2">英国</p>
-          </div>
-          <div class="tjpics">
-            <img src="../pinpai/pinpai02.jpg" alt="">
-            <p class="p1">MAG</p>
-            <p class="p2">英国</p>
-          </div>
-          <div class="tjpics">
-            <img src="../pinpai/pinpai02.jpg" alt="">
-            <p class="p1">MAG</p>
-            <p class="p2">英国</p>
-          </div>
-          <div class="tjpics">
-            <img src="../pinpai/pinpai02.jpg" alt="">
-            <p class="p1">MAG</p>
-            <p class="p2">英国</p>
-          </div>
-          <div class="tjpics">
-            <img src="../pinpai/pinpai02.jpg" alt="">
-            <p class="p1">MAG</p>
-            <p class="p2">英国</p>
-          </div>
-          <div class="tjpics">
-            <img src="../pinpai/pinpai02.jpg" alt="">
-            <p class="p1">MAG</p>
-            <p class="p2">英国</p>
-          </div>
-          <div class="tjpics">
-            <img src="../pinpai/pinpai02.jpg" alt="">
-            <p class="p1">MAG</p>
-            <p class="p2">英国</p>
-          </div>
-
-        </div>
-      </div>
-
-      <div class="header04">
-      <div class="headerTitle">
-        <span class="title">——医疗品牌——</span>
-      </div>
-
-      <div class="tj01">
-        <div class="tjpics">
-          <img src="../pinpai/yl01.jpg" alt="">
-          <p class="p1">恩倍多</p>
-          <p class="p2">中国</p>
-        </div>
-        <div class="tjpics">
-          <img src="../pinpai/ly02.jpg" alt="">
-          <p class="p1">宝神</p>
-          <p class="p2">中国</p>
-        </div>
-        <div class="tjpics">
-          <img src="../pinpai/ly03.jpg" alt="">
-          <p class="p1">艾禾美</p>
-          <p class="p2">美国</p>
-        </div>
-        <div class="tjpics">
-          <img src="../pinpai/ly04.jpg" alt="">
-          <p class="p1">伯莱恩</p>
-          <p class="p2">法国</p>
-        </div>
-      </div>
-    </div>
-
-      <div class="header05">
-        <div class="headerTitle">
-          <span class="title">——洗护品牌——</span>
-        </div>
-
-        <div class="tj01">
-          <div class="tjpics">
-            <img src="../pinpai/xh01.jpg" alt="">
-            <p class="p1">ACANA</p>
-            <p class="p2">英国</p>
-          </div>
-          <div class="tjpics">
-            <img src="../pinpai/xh01.jpg" alt="">
-            <p class="p1">ACANA</p>
-            <p class="p2">英国</p>
-          </div>
-          <div class="tjpics">
-            <img src="../pinpai/xh01.jpg" alt="">
-            <p class="p1">ACANA</p>
-            <p class="p2">英国</p>
-          </div>
-          <div class="tjpics">
-            <img src="../pinpai/xh02.jpg" alt="">
-            <p class="p1">威铂</p>
-            <p class="p2">美国</p>
-          </div>
-          <div class="tjpics">
-            <img src="../pinpai/xh02.jpg" alt="">
-            <p class="p1">威铂</p>
-            <p class="p2">美国</p>
-          </div>
-          <div class="tjpics">
-            <img src="../pinpai/xh02.jpg" alt="">
-            <p class="p1">威铂</p>
-            <p class="p2">美国</p>
-          </div>
-          <div class="tjpics">
-            <img src="../pinpai/xh03.jpg" alt="">
-            <p class="p1">雷米高</p>
-            <p class="p2">中国</p>
-          </div>
-          <div class="tjpics">
-            <img src="../pinpai/xh03.jpg" alt="">
-            <p class="p1">雷米高</p>
-            <p class="p2">中国</p>
-          </div>
-          <div class="tjpics">
-            <img src="../pinpai/xh03.jpg" alt="">
-            <p class="p1">雷米高</p>
-            <p class="p2">中国</p>
-          </div>
-          <div class="tjpics">
-            <img src="../pinpai/xh04.jpg" alt="">
-            <p class="p1">雪貂留香</p>
-            <p class="p2">中国</p>
-          </div>
-          <div class="tjpics">
-            <img src="../pinpai/xh04.jpg" alt="">
-            <p class="p1">雪貂留香</p>
-            <p class="p2">中国</p>
-          </div>
-          <div class="tjpics">
-            <img src="../pinpai/xh04.jpg" alt="">
-            <p class="p1">雪貂留香</p>
-            <p class="p2">中国</p>
-          </div>
-        </div>
-      </div>
-
-      <div class="header06">
-        <div class="headerTitle">
-          <span class="title">——玩具品牌——</span>
-        </div>
-
-        <div class="tj01">
-          <div class="tjpics">
-            <img src="../pinpai/play01.jpg" alt="">
-            <p class="p1">莱诺</p>
-            <p class="p2">中国</p>
-          </div>
-          <div class="tjpics">
-            <img src="../pinpai/play01.jpg" alt="">
-            <p class="p1">莱诺</p>
-            <p class="p2">中国</p>
-          </div>
-          <div class="tjpics">
-          <img src="../pinpai/play01.jpg" alt="">
-          <p class="p1">莱诺</p>
-          <p class="p2">中国</p>
-        </div>
-          <div class="tjpics">
-            <img src="../pinpai/play02.jpg" alt="">
-            <p class="p1">甜甜猫</p>
-            <p class="p2">中国</p>
-          </div>
-          <div class="tjpics">
-            <img src="../pinpai/play02.jpg" alt="">
-            <p class="p1">甜甜猫</p>
-            <p class="p2">中国</p>
-          </div>
-          <div class="tjpics">
-            <img src="../pinpai/play02.jpg" alt="">
-            <p class="p1">甜甜猫</p>
-            <p class="p2">中国</p>
-          </div>
-
-          <div class="tjpics">
-            <img src="../pinpai/play03.jpg" alt="">
-            <p class="p1">MAJOR DOG</p>
-            <p class="p2">德国</p>
-          </div>
-          <div class="tjpics">
-            <img src="../pinpai/play03.jpg" alt="">
-            <p class="p1">MAJOR DOG</p>
-            <p class="p2">德国</p>
-          </div>
-          <div class="tjpics">
-            <img src="../pinpai/play03.jpg" alt="">
-            <p class="p1">MAJOR DOG</p>
-            <p class="p2">德国</p>
-          </div>
-          <div class="tjpics">
-            <img src="../pinpai/play04.jpg" alt="">
-            <p class="p1">Petio</p>
-            <p class="p2">日本</p>
-          </div>
-          <div class="tjpics">
-            <img src="../pinpai/play04.jpg" alt="">
-            <p class="p1">Petio</p>
-            <p class="p2">日本</p>
-          </div>
-          <div class="tjpics">
-            <img src="../pinpai/play04.jpg" alt="">
-            <p class="p1">Petio</p>
-            <p class="p2">日本</p>
+            <img :src="list.logo" alt="">
+            <p class="p1">{{list.name}}</p>
+            <p class="p2">{{list.address}}</p>
           </div>
         </div>
       </div>
@@ -379,7 +20,16 @@
 </template>
 
 <script>
-    export default{}
+  import {mapState} from 'vuex'
+    export default{
+      mounted(){
+          this.$store.dispatch('getBrand')
+      },
+
+      computed:{
+        ...mapState(['brand'])
+      }
+    }
 </script>
 
 <style lang="stylus" rel="stylesheet/stylus">
@@ -398,7 +48,7 @@
       width 100%
       height 100%
       text-align center
-      margin-top 6px
+      margin-top 35px
       padding-top 15px
       padding-bottom 15px
     .tj01

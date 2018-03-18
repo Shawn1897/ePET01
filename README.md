@@ -117,9 +117,19 @@ day04:
     v-for="(value,index) in homepage.menu_list"中的图片链接,你需要写<img :src="value" >
     (4)说一下首页那几个轮播实现的原理。因为那几个轮播(或是拉弹簧)都是用的swiper,
 
+<div class="all">
+              <img src="../pinpai/all.png" alt="">
+            </div>
 
 
+day05
+  当前进度:
+    因为昨天第二页页面机构出问题，所以第二页的数据交互拖到了day05.第二页在组长的帮助下快完成了
 
+    不足:页面布局，数据交互
+
+    进度:
+    在组长的帮助下布局已完成，第二页的数据交互今天也即将完成
 
 
 
