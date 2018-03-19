@@ -16,6 +16,7 @@
       <div class="brandContainer">
         <div class="brandList" v-for="(tap,index) in category" :key="index"
         v-if="currentIndex === index">
+
           <!--主粮3列-->
           <div class="mainFood">
             <div class="title">
@@ -32,17 +33,17 @@
             </ul>
           </div>
 
-       <!--热门2列-->
-          <div class="popularFood">
-            <p class="popularTitle">热门品牌</p>
+          <!--热门2列-->
+          <div class="popularFood" v-if="tap.cate_list.length>1" >
+            <p class="popularTitle">{{tap.cate_list[1].title}}</p>
             <ul class="popularUl">
-              <li class="popularLi">
-                <img src="../pinpai/food02.jpg" alt="">
-                <span>天衡宝(原雪山)</span>
+              <li class="popularLi" v-for="(lis,index) in tap.cate_list[1].list">
+                <img :src="lis.logo" alt="">
+                <span>{{lis.name}}</span>
               </li>
 
             </ul>
-          </div>-->
+          </div>
         </div>
       </div>
     </div>
@@ -105,6 +106,7 @@
             border-bottom 1px solid #f5f5f5
             &.on
               background #f5f5f5
+              color hotpink
 
     .brandContainer
       width 80%

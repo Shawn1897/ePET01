@@ -55,8 +55,8 @@
       width 100%
       height 100%
       .tjpics
-        width 30%
-        height 100%
+        width 110px
+        height 110px
         margin-left 10px
         margin-bottom 15px
         float left
