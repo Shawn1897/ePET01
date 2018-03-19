@@ -1,7 +1,11 @@
 <template>
   <div id="app">
     <router-view></router-view>
-    <FooterGuide></FooterGuide>
+    <FooterGuide>
+      <div class="activeDog">
+        <img src="./pages/Msite/image/end/godog.png" alt="">
+      </div>
+    </FooterGuide>
   </div>
 </template>
 

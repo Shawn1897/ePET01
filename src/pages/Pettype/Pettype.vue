@@ -1,7 +1,7 @@
 <template>
     <div>
-      <div class="tab">
-        <div class="tab-item">
+      <div class="tab" >
+        <div class="tab-item" >
           <router-link tag="span" to="/pettype/type" replace >分类</router-link>
         </div>
         <div class="tab-item">
@@ -15,7 +15,16 @@
 <script>
 
     export default{
-
+      data(){
+          return {
+              currentIndex:0
+          }
+      },
+      methods:{
+          getCurrentIndex(index){
+              this.currentIndex = index
+          }
+      }
     }
 </script>
 
@@ -34,6 +43,4 @@
       margin 0 20px
       .span
         font-size 13px
-        >span.router-link-active
-          color red
 </style>

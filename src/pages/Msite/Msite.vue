@@ -37,7 +37,9 @@
       <div class="serviceType swiper-container">
         <div class="swiper-wrapper">
           <div class="serviceItem swiper-slide" v-for="(menu,index) in homepage.menus" :key="index">
-            <span class="text move " >{{menu.menu_name}}</span>
+            <span class="text" @click="getCurrentIndex(index)" :class="{on:index === currentIndex}">
+              {{menu.menu_name}}
+            </span>
           </div>
         </div>
       </div>
@@ -52,6 +54,7 @@
       </div>
       <div class="swiper-pagination"></div>
     </div>
+
 
     <!--紧贴轮播的静态图-->
     <div class="kpMoving">
@@ -239,10 +242,13 @@
         <span>重庆易宠科技有限公司</span>
       </div>
     </footer>
+
+
   </div>
 </template>
 
 <script>
+  import BScroll from 'better-scroll'
   import Swiper from 'swiper'
   import 'swiper/dist/css/swiper.min.css'
   import {mapState} from 'vuex'
@@ -250,7 +256,8 @@
     data(){
       return{
           openTheDoor:true,
-          chazi:true
+          chazi:true,
+          currentIndex:0
       }
     },
 
@@ -302,6 +309,8 @@
             //（1）前台页面动态获取数据，发送ajax请求、然后action异步获取数据,接着commit到mutations。更新state中
             //相对应的数据。在任何一个组建中获得state中更新好的数据。然后进行数据读取
 
+
+
           })
       })
 
@@ -316,7 +325,15 @@
           this.chazi = false
           this.$refs.all.style.marginTop = -60 + 'px'
           this.$refs.high.style.height = 77 + 'px'
-        }
+        },
+
+        getCurrentIndex(index){
+            this.currentIndex = index
+        },
+
+
+
+
     }
   }
 </script>
@@ -409,10 +426,8 @@
               color #666666
               height 20px
               padding-bottom 5px
-              &.current
-                color #6AB15E
-                height 200px
-                padding 0
+              &.on
+                color #78E736
 
     .special
       margin-top 137px
