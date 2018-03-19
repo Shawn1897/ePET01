@@ -193,9 +193,33 @@ day05
         </div>
   day05的说了这么多。还要一些非常重要的要做"笔记"。比如这几天依赖非常困扰我的页面架构问题。先把娟姐的静态界面好好
 保存起来。今天把1、2页的"剩余可操作的功能"完善一下。非常重要!!!
+this.refs.high.style.padding-top = 这个临时记的语法是错误的，即便用到其在js中正确的表达方式应该是
+this.refs.high.style.paddingTop
+像刚刚的错误。是this.refs.all.style.marginTop
+但在jQuery中还是要带"-"
 
 
 
 
+    var swiper = new Swiper('.swiper-container', {
+      slidesPerView: 'auto',
+      centeredSlides: true,
+      spaceBetween: 30,
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+      },
+    });
 
+    需要记住一点,用swiper写拉弹簧的时候。每一个层级有关swiper的都不能少。
+    第一层的swiper-container
+    第二层的swiper-wrapper
+    第三层的swiper-slide
+    <div class="serviceType swiper-container">
+            <div class="swiper-wrapper">
+              <div class="serviceItem swiper-slide" v-for="(menu,index) in homepage.menus" :key="index">
+                <span class="text move " >{{menu.menu_name}}</span>
+              </div>
+            </div>
+          </div>
 

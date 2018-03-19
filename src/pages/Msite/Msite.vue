@@ -1,10 +1,12 @@
 <template>
-  <div>
-
-    <div class="xiazaiapp">
+  <div class="app" ref="all">
+    <div class="xiazaiapp" ref="high">
       <!--广告图片-->
       <div class="appImage">
-      <span class="ggRight">
+        <span class="ggClose" @click="hide" v-if="chazi">
+          <img src="./image/close2.png" alt="">
+        </span>
+      <span class="ggRight" v-if="openTheDoor">
         <img src="./image/guanggao.jpg">
       </span>
       </div>
@@ -32,8 +34,12 @@
       </div>
 
       <!--搜索框下的分类导航栏-->
-      <div class="serviceType">
-        <div class="serviceItem" v-for="(menu,index) in homepage.menus" :key="index"><span class="text move">{{menu.menu_name}}</span></div>
+      <div class="serviceType swiper-container">
+        <div class="swiper-wrapper">
+          <div class="serviceItem swiper-slide" v-for="(menu,index) in homepage.menus" :key="index">
+            <span class="text move " >{{menu.menu_name}}</span>
+          </div>
+        </div>
       </div>
     </div>
 
@@ -43,7 +49,6 @@
         <div class="swiper-slide" v-for="(pics,index) in homepage.dog_banner" :key="index">
           <img :src="pics" alt="">
         </div>
-
       </div>
       <div class="swiper-pagination"></div>
     </div>
@@ -57,18 +62,10 @@
     <div class="ten">
       <!--上面5张图-->
       <div class="front">
-        <div class="frontImg" v-for="(value,index) in homepage.menu_list"><img :src="value" alt=""></div>
-
+        <div class="frontImg" v-for="(value,index) in homepage.menu_list">
+          <img :src="value" alt="">
+        </div>
       </div>
-
-      <!--&lt;!&ndash;下面5张图&ndash;&gt;-->
-      <!--<div class="behind">-->
-        <!--<div class="behindImg"><img src="./image/ePet06.jpg" alt=""></div>-->
-        <!--<div class="behindImg"><img src="./image/ePet07.jpg" alt=""></div>-->
-        <!--<div class="behindImg"><img src="./image/ePet08.jpg" alt=""></div>-->
-        <!--<div class="behindImg"><img src="./image/ePet09.jpg" alt=""></div>-->
-        <!--<div class="behindImg"><img src="./image/ePet10.jpg" alt=""></div>-->
-      <!--</div>-->
     </div>
 
     <!--秒杀图片1-->
@@ -250,8 +247,14 @@
   import 'swiper/dist/css/swiper.min.css'
   import {mapState} from 'vuex'
   export default{
-    mounted(){
+    data(){
+      return{
+          openTheDoor:true,
+          chazi:true
+      }
+    },
 
+    mounted(){
 
       this.$store.dispatch('getHomepage',() =>{
 
@@ -268,6 +271,16 @@
               }
 
             });
+
+            //第一个分类导航
+            new Swiper('.serviceType', {
+              slidesPerView: 'auto',
+              spaceBetween: 10,
+              pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+              },
+            })
 
             //秒杀拉弹簧
             new Swiper('.fastKill', {
@@ -297,10 +310,13 @@
       ...mapState(['homepage'])
     },
 
-    watch:{
-
-
-
+    methods:{
+        hide(){
+          this.openTheDoor = false
+          this.chazi = false
+          this.$refs.all.style.marginTop = -60 + 'px'
+          this.$refs.high.style.height = 77 + 'px'
+        }
     }
   }
 </script>
@@ -322,6 +338,18 @@
       z-index 100
       .appImage
         width 100%
+        .ggClose
+          width 5%
+          height 5%
+          position absolute
+          top 19px
+          left 14px
+          >img
+            width 20px
+            height 20px
+            background transparent
+            border-radius 50%
+            border 1px solid #f6f1f1
         .ggRight
           display block
           width 100%
@@ -369,20 +397,22 @@
       .serviceType
         display flex
         margin-top 20px
-        .serviceItem
-          flex 1
-          display flex
-          justify-content center
-          white-space nowrap
-          margin-left 23px
-          span
-            color #666666
-            height 20px
-            padding-bottom 5px
-            &.current
-              color #6AB15E
-              height 200px
-              padding 0
+        width 100%
+        .swiper-wrapper
+          .serviceItem
+            flex 1
+            display flex
+            justify-content center
+            white-space nowrap
+            margin-left 23px
+            span
+              color #666666
+              height 20px
+              padding-bottom 5px
+              &.current
+                color #6AB15E
+                height 200px
+                padding 0
 
     .special
       margin-top 137px
